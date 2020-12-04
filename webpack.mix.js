@@ -16,4 +16,6 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .webpackConfig(require('./webpack.config'));
+    .copy('resources/img', 'public/img')
+    .webpackConfig(require('./webpack.config'))
+    .browserSync("127.0.0.1:8000");
