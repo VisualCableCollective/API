@@ -14,7 +14,11 @@ module.exports = {
             },
             backgroundImage: theme => ({
                 'home-1': "url('/img/bg/home-1.jpg')",
+                'products-vtcm-home': "url('/img/bg/products-vtcm-home.png')"
             }),
+            minHeight: { 
+                '25vh': '25vh',
+            },
         },
     },
 
