@@ -21297,14 +21297,26 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/scss/app2.scss":
+/*!**********************************!*\
+  !*** ./resources/scss/app2.scss ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!***********************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.css ***!
-  \***********************************************************/
+/*!**************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/scss/app2.scss ./resources/css/app.css ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\Joschua\Documents\GitHub\VCC\VCC-Website\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Users\Joschua\Documents\GitHub\VCC\VCC-Website\resources\scss\app2.scss */"./resources/scss/app2.scss");
 module.exports = __webpack_require__(/*! C:\Users\Joschua\Documents\GitHub\VCC\VCC-Website\resources\css\app.css */"./resources/css/app.css");
 
 

@@ -19,6 +19,14 @@ module.exports = {
             minHeight: { 
                 '25vh': '25vh',
             },
+            backgroundColor: theme => ({
+                'dark-1': '#0d0d0d',
+                'dark-2': '#121212',
+                'dark-3': '#1c1c1c',
+            }),
+            borderColor: theme => ({
+                'dark-1': '#333',
+               })
         },
     },
 

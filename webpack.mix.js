@@ -17,5 +17,6 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
     ])
     .copy('resources/img', 'public/img')
+    .sass('resources/scss/app2.scss', 'public/css')
     .webpackConfig(require('./webpack.config'))
     .browserSync("127.0.0.1:8000");
