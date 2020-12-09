@@ -8,11 +8,14 @@
                     <img src="/img/branding/vcc/logo-transparent.png" alt="VCC Logo" class="h-14">
                 </div>
                 <h1 class="text-xl font-bold pb-3">Sign in to your VCC account.</h1>
+                @error("email")
+                <p class="text-red-500 pb-1">Incorrect credentials.</p>
+                @enderror
                 <div class="mb-4">
-                    <input class="shadow-inner focus:shadow rounded w-full py-2 px-3 placeholder-gray-400 bg-dark-4 focus:bg-dark-5 transition-all duration-75 outline-none" type="email" name="email" placeholder="E-mail address" autocomplete="email" required>
+                    <input class="shadow-inner focus:shadow rounded w-full py-2 px-3 placeholder-gray-400 bg-dark-4 focus:bg-dark-5 transition-all duration-75 outline-none @error("email") border-2 border-red-500 @enderror" type="email" name="email" id="email-input" placeholder="E-mail address" autocomplete="email" required>
                 </div>
                 <div class="mb-4">
-                    <input class="shadow-inner focus:shadow rounded w-full py-2 px-3 placeholder-gray-400 bg-dark-4 focus:bg-dark-5 transition-all duration-75 outline-none" type="password" name="password" placeholder="Password" autocomplete="current-password" required>
+                    <input class="shadow-inner focus:shadow rounded w-full py-2 px-3 placeholder-gray-400 bg-dark-4 focus:bg-dark-5 transition-all duration-75 outline-none @error("email") border-2 border-red-500 @enderror" type="password" name="password" placeholder="Password" autocomplete="current-password" required>
                 </div>
                 <button type="submit" class="bg-blue-600 hover:bg-blue-700 w-full p-3 rounded transition-all duration-100 mt-4 onclick-spinner" id="LoginSubmitBtn" data-loading-text="Signing In...">
                     <div class="flex items-center justify-center">
