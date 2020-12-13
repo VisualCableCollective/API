@@ -17,7 +17,15 @@
                 <div class="mb-4">
                     <input class="shadow-inner focus:shadow rounded w-full py-2 px-3 placeholder-gray-400 bg-dark-4 focus:bg-dark-5 transition-all duration-75 outline-none @error("email") border-2 border-red-500 @enderror" type="password" name="password" placeholder="Password" autocomplete="current-password" required>
                 </div>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 w-full p-3 rounded transition-all duration-100 mt-4 onclick-spinner" id="LoginSubmitBtn" data-loading-text="Signing In...">
+                <div class="mb-4 flex items-center justify-between text-dark text-sm">
+                    <div class="inline-flex items-center pr-12">
+                        <input type="checkbox" name="remember" class="form-checkbox h-5 w-5 text-blue-600" checked><span class="ml-2">Remember me</span>
+                    </div>
+                    @if (Route::has('password.request'))
+                        <a href="{{ route('password.request') }}">Forgot Password?</a>
+                    @endif
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 w-full p-3 rounded transition-all duration-100 mt-3 onclick-spinner" id="LoginSubmitBtn" data-loading-text="Signing In...">
                     <div class="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 38 38" stroke="#fff" class="pr-2 hidden" id="LoginSubmitLoadingSVG">
                             <g fill="none" fill-rule="evenodd">
@@ -32,6 +40,11 @@
                         <span id="LoginSubmitBtnText">Sign In</span>
                     </div>
                 </button>
+                @if (Route::has('register'))
+                <div class="mt-5 text-sm">
+                    <p class="text-dark">Don't have a VCC account yet? <a class="text-white" href="{{route("register")}}">Sign Up</a></p>
+                </div>
+                @endif
             </form>
         </div>
     </div>    
