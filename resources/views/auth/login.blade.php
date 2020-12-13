@@ -1,7 +1,7 @@
 @extends('layouts.basic')
 @section('content')
     <div class="bg-dark-1 min-h-screen w-full flex items-center justify-center">
-        <div class="bg-dark-3 rounded-lg text-white p-12 shadow-md">
+        <div class="bg-dark-3 rounded-lg text-white p-12 shadow-md max-w-md">
             <form action="{{ route('login') }}" method="POST">
                 @csrf
                 <div class="flex justify-center pb-4">
@@ -25,7 +25,7 @@
                         <a href="{{ route('password.request') }}">Forgot Password?</a>
                     @endif
                 </div>
-                <button type="submit" class="bg-blue-600 hover:bg-blue-700 w-full p-3 rounded transition-all duration-100 mt-3 onclick-spinner" id="LoginSubmitBtn" data-loading-text="Signing In...">
+                <button type="button" class="bg-blue-600 hover:bg-blue-700 w-full p-3 rounded transition-all duration-100 mt-3 onclick-spinner" id="LoginSubmitBtn" data-loading-text="Signing In...">
                     <div class="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 38 38" stroke="#fff" class="pr-2 hidden" id="LoginSubmitLoadingSVG">
                             <g fill="none" fill-rule="evenodd">
