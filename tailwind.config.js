@@ -28,9 +28,11 @@ module.exports = {
                 'dark-4': '#2b2b2b',
                 'dark-5': '#363636',
             }),
-            borderColor: theme => ({
+            borderColor: {
                 'dark-1': '#333',
-            }),
+                'dark-2': '#3d3d3d',
+                'dark-3': '#4d4d4d',
+            },
             textColor: {
                 'dark': '#7d7d7d',
             }

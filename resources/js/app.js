@@ -29,7 +29,7 @@ $('.modal-toggler').on("click", function(){
     }
 });
 
-$('.modal-bg').on("click", function(){
+$('.onclick-close-modal').on("click", function(){
     CloseModal($(this).data('modal'));
 });
 

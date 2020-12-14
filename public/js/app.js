@@ -33839,7 +33839,7 @@ $('.modal-toggler').on("click", function () {
     CloseModal(target);
   }
 });
-$('.modal-bg').on("click", function () {
+$('.onclick-close-modal').on("click", function () {
   CloseModal($(this).data('modal'));
 });
 
