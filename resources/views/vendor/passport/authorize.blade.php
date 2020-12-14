@@ -6,7 +6,18 @@
                 <img src="/img/branding/vcc/logo-transparent.png" alt="VCC Logo" class="h-14">
             </div>
             <h1 class="text-xl pb-3"><strong>{{ $client->name }}</strong> is requesting permission to access your VCC account.</h1>
-            <div class="flex w-full justify-between mt-3">
+            @if (count($scopes) > 0)
+                            <div >
+                                    <p><strong>This application will be able to:</strong></p>
+
+                                    <ul>
+                                        @foreach ($scopes as $scope)
+                                            <li>- {{ $scope->description }}</li>
+                                        @endforeach
+                                    </ul>
+                            </div>
+                        @endif
+            <div class="flex w-full justify-between mt-5">
                 <form method="post" action="{{ route('passport.authorizations.approve') }}" class="flex-1 mr-2">
                     @csrf
     

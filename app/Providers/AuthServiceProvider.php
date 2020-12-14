@@ -28,5 +28,11 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::routes();
         Passport::hashClientSecrets();
+        Passport::tokensCan([
+            'get-vcc-id' => 'Get your VCC account ID and username',
+        ]);
+        Passport::setDefaultScope([
+            'get-vcc-id',
+        ]);
     }
 }
