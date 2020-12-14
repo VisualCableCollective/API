@@ -20,4 +20,4 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/scss/app2.scss', 'public/css')
     .webpackConfig(require('./webpack.config'))
     .browserSync("127.0.0.1:8000")
-    .disableSuccessNotifications(); //because it is annoying
+    .disableNotifications(); //because it is annoying
