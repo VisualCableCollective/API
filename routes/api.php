@@ -17,6 +17,12 @@ use Illuminate\Validation\ValidationException;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('user')->middleware('auth:api')->group(function(){
+    Route::get('/me', function (Request $request) {
+        return $request->user();
+    });
 });
