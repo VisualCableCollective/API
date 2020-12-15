@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
+use App\Models\Passport\Client;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -34,5 +35,6 @@ class AuthServiceProvider extends ServiceProvider
         Passport::setDefaultScope([
             'get-vcc-id',
         ]);
+        Passport::useClientModel(Client::class);
     }
 }
