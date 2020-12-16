@@ -13,6 +13,6 @@ class Client extends BaseClient
      */
     public function skipsAuthorization()
     {
-        return $this->firstParty();
+        return $this->firstParty;
     }
 }
