@@ -20,7 +20,9 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="antialiased">
+        @yield('before-content')
         @yield('content')
+        @yield('after-content')
 
         @stack('modals')
 

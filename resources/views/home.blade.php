@@ -1,5 +1,6 @@
 @extends('layouts.app')
-@section('page-content')
+@section('content')
+@parent
 <div class="top-banner bg-home-1 bg-cover text-white flex items-center justify-items-center" style="height: 100vh;">
     <div class="mx-auto text-center">
         <h1 class="text-3xl sm:text-6xl font-bold">The VisualCable Collective</h1>

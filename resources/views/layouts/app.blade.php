@@ -1,5 +1,5 @@
 @extends('layouts.basic')
-@section('content')
+@section('before-content')
 <div class="min-h-screen bg-gray-100">
     @include("components.navbar")
 
@@ -16,11 +16,12 @@
 
     <!-- Page Content -->
     <main>
-        @yield('page-content')
-    </main>
-    @include("components.footer")
-</div>
+@endsection
 
+@section('after-content')
+    </main>
+@include("components.footer")
+</div>
 @stack('modals')
 
 @livewireScripts

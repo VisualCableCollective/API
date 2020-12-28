@@ -25,7 +25,7 @@
                         <a href="" class="text-gray-300 hover:text-white">Privacy & Terms of Use</a>
                     </li>
                     <li class="my-1">
-                        <a href="" class="text-gray-300 hover:text-white">Imprint</a>
+                        <a href="{{route('legal.legal-disclosure')}}" class="text-gray-300 hover:text-white">Legal Disclosure</a>
                     </li>
                 </ul>
             </div>
