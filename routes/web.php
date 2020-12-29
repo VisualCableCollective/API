@@ -22,4 +22,5 @@ Route::get('/user/settings', [UserProfileController::class, 'show'])->name('user
 
 Route::prefix('legal')->name('legal.')->group(function(){
     Route::view('legal-disclosure', 'legal.legal_disclosure')->name('legal-disclosure');
+    Route::view('terms-of-service', 'legal.terms_of_service')->name('terms-of-service');
 });

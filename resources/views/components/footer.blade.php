@@ -22,7 +22,7 @@
                         <a href="" class="text-gray-300 hover:text-white">Service Status</a>
                     </li>
                     <li class="my-1">
-                        <a href="" class="text-gray-300 hover:text-white">Privacy & Terms of Use</a>
+                        <a href="{{route('legal.terms-of-service')}}" class="text-gray-300 hover:text-white">Terms of Use</a>
                     </li>
                     <li class="my-1">
                         <a href="{{route('legal.legal-disclosure')}}" class="text-gray-300 hover:text-white">Legal Disclosure</a>
