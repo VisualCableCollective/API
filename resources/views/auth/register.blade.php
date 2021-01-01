@@ -29,7 +29,7 @@
                 </div>
                 <div class="mb-4 text-dark text-sm">
                     <div class="inline-flex items-center">
-                        <input type="checkbox" name="agreed_tos" class="form-checkbox h-5 w-5 text-blue-600" required><span class="ml-2">I have read and agree to the <a href="" class="text-white">terms of service</a>.</span>
+                        <input type="checkbox" name="agreed_tos" class="form-checkbox h-5 w-5 text-blue-600" required><span class="ml-2">I have read and agree to the <a href="{{route('legal.terms-of-service')}}" class="text-white">terms of service</a>.</span>
                     </div>
                 </div>
                 <button type="submit" class="bg-blue-600 hover:bg-blue-700 w-full p-3 rounded transition-all duration-100 mt-3 onclick-spinner" id="RegisterSubmitBtn" data-loading-text="Signing Up...">

@@ -46,7 +46,7 @@
 
             <h2 class="font-bold text-xl">8. Your Privacy</h2>
 
-            <p>Please read our Privacy Policy.</p><br>
+            <p>Please read our <a href="{{route('legal.privacy-policy')}}">Privacy Policy</a>.</p><br>
 
             <h2 class="font-bold text-xl">9. Governing Law</h2>
 
