@@ -25,6 +25,9 @@
                         <a href="{{route('legal.terms-of-service')}}" class="text-gray-300 hover:text-white">Terms of Use</a>
                     </li>
                     <li class="my-1">
+                        <a href="{{route('legal.privacy-policy')}}" class="text-gray-300 hover:text-white">Privacy Policy</a>
+                    </li>
+                    <li class="my-1">
                         <a href="{{route('legal.legal-disclosure')}}" class="text-gray-300 hover:text-white">Legal Disclosure</a>
                     </li>
                 </ul>
