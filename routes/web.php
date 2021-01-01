@@ -24,3 +24,9 @@ Route::prefix('legal')->name('legal.')->group(function(){
     Route::view('legal-disclosure', 'legal.legal_disclosure')->name('legal-disclosure');
     Route::view('terms-of-service', 'legal.terms_of_service')->name('terms-of-service');
 });
+
+Route::prefix('redirect')->name('redirect.')->group(function(){
+    Route::redirect("discord", "https://discord.gg/WzdyBnm")->name('discord');
+    Route::redirect("instagram", "https://www.instagram.com/_vcc_online_/")->name('instagram');
+    Route::redirect("twitter", "https://twitter.com/vcc_online")->name('twitter');
+});
