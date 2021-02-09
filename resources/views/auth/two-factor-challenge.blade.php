@@ -1,57 +1,60 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
-
-        <div x-data="{ recovery: false }">
-            <div class="mb-4 text-sm text-gray-600" x-show="! recovery">
-                {{ __('Please confirm access to your account by entering the authentication code provided by your authenticator application.') }}
-            </div>
-
-            <div class="mb-4 text-sm text-gray-600" x-show="recovery">
-                {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
-            </div>
-
-            <x-jet-validation-errors class="mb-4" />
-
-            <form method="POST" action="/two-factor-challenge">
+@extends('layouts.basic')
+@section('content')
+    <div class="bg-dark-1 min-h-screen w-full flex items-center justify-center">
+        <div class="bg-dark-3 rounded-lg text-white p-12 shadow-md max-w-md" x-data="{ recovery: false }">
+            <form action="/two-factor-challenge" method="POST">
                 @csrf
-
-                <div class="mt-4" x-show="! recovery">
-                    <x-jet-label for="code" value="{{ __('Code') }}" />
-                    <x-jet-input id="code" class="block mt-1 w-full" type="text" inputmode="numeric" name="code" autofocus x-ref="code" autocomplete="one-time-code" />
+                <div class="flex justify-center pb-4">
+                    <img src="/img/branding/vcc/logo-transparent.png" alt="VCC Logo" class="h-14">
+                </div>
+                <div class="mb-4">
+                    <h1 class="text-lg font-bold pb-3" x-show="! recovery">Please confirm access to your account by entering the authentication code provided by your authenticator application.</h1>
+                    <h1 class="text-lg font-bold pb-3" x-show="recovery">Please confirm access to your account by entering one of your emergency recovery codes.</h1>
+                </div>
+                <div class="mb-4" x-show="! recovery">
+                    <input class="shadow-inner focus:shadow rounded w-full py-2 px-3 placeholder-gray-400 bg-dark-4 focus:bg-dark-5 transition-all duration-75 outline-none" type="text" inputmode="numeric" id="code" name="code" placeholder="Code" autocomplete="one-time-code" autofocus required>
                 </div>
 
-                <div class="mt-4" x-show="recovery">
-                    <x-jet-label for="recovery_code" value="{{ __('Recovery Code') }}" />
-                    <x-jet-input id="recovery_code" class="block mt-1 w-full" type="text" name="recovery_code" x-ref="recovery_code" autocomplete="one-time-code" />
+                <div class="mb-4" x-show="recovery">
+                    <input class="shadow-inner focus:shadow rounded w-full py-2 px-3 placeholder-gray-400 bg-dark-4 focus:bg-dark-5 transition-all duration-75 outline-none" type="text" id="recovery_code" name="recovery_code" x-ref="recovery_code" placeholder="Recovery Code" autocomplete="one-time-code" autofocus required>
                 </div>
-
-                <div class="flex items-center justify-end mt-4">
-                    <button type="button" class="text-sm text-gray-600 hover:text-gray-900 underline cursor-pointer"
-                                    x-show="! recovery"
-                                    x-on:click="
+                <button type="button" class="bg-blue-600 hover:bg-blue-700 w-full p-3 rounded transition-all duration-100 mt-3 onclick-spinner" id="LoginSubmitBtn" data-loading-text="Signing In...">
+                    <div class="flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 38 38" stroke="#fff" class="pr-2 hidden" id="LoginSubmitLoadingSVG">
+                            <g fill="none" fill-rule="evenodd">
+                                <g transform="translate(1 1)" stroke-width="2">
+                                    <circle stroke-opacity=".5" cx="18" cy="18" r="18"/>
+                                    <path d="M36 18c0-9.94-8.06-18-18-18">
+                                        <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"/>
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                        <span id="LoginSubmitBtnText">Sign In</span>
+                    </div>
+                </button>
+                @if (Route::has('register'))
+                    <div class="mt-5 text-sm">
+                        <button type="button" class="text-sm text-dark hover:text-white cursor-pointer focus:outline-none"
+                                x-show="! recovery"
+                                x-on:click="
                                         recovery = true;
                                         $nextTick(() => { $refs.recovery_code.focus() })
                                     ">
-                        {{ __('Use a recovery code') }}
-                    </button>
+                            Use a recovery code
+                        </button>
 
-                    <button type="button" class="text-sm text-gray-600 hover:text-gray-900 underline cursor-pointer"
-                                    x-show="recovery"
-                                    x-on:click="
+                        <button type="button" class="text-sm text-dark hover:text-white cursor-pointer focus:outline-none"
+                                x-show="recovery"
+                                x-on:click="
                                         recovery = false;
                                         $nextTick(() => { $refs.code.focus() })
                                     ">
-                        {{ __('Use an authentication code') }}
-                    </button>
-
-                    <x-jet-button class="ml-4">
-                        {{ __('Login') }}
-                    </x-jet-button>
-                </div>
+                            Use an authentication code
+                        </button>
+                    </div>
+                @endif
             </form>
         </div>
-    </x-jet-authentication-card>
-</x-guest-layout>
+    </div>
+@endsection
