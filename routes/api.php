@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use App\Http\Controllers\API\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::prefix('user')->middleware('auth:api')->group(function(){
-    Route::get('/me', function (Request $request) {
+    Route::get('{id}', [UserController::class, "show"]);
+    Route::get('me', function (Request $request) {
         return $request->user();
     });
 });
