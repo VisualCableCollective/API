@@ -23,8 +23,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::prefix('user')->middleware('auth:api')->group(function(){
-    Route::get('{id}', [UserController::class, "show"]);
     Route::get('me', function (Request $request) {
         return $request->user();
     });
+    Route::get('{id}', [UserController::class, "show"]);
 });
