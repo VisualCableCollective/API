@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    purge: [
+    content: [
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
@@ -18,7 +18,7 @@ module.exports = {
                 //errors
                 '404': "url('/img/bg/404.jpg')",
             }),
-            minHeight: { 
+            minHeight: {
                 '25vh': '25vh',
             },
             backgroundColor: theme => ({
@@ -38,10 +38,4 @@ module.exports = {
             }
         },
     },
-
-    variants: {
-        opacity: ['responsive', 'hover', 'focus', 'disabled'],
-    },
-
-    plugins: [require('@tailwindcss/ui')],
 };
