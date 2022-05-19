@@ -1,6 +1,6 @@
 @auth
     <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="fixed z-10 inset-0 overflow-y-auto hidden modal" id="my-account-modal-wrapper">
+<div class="fixed z-20 inset-0 overflow-y-auto hidden modal" id="my-account-modal-wrapper">
   <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
     <!--
       Background overlay, show/hide based on modal state.
