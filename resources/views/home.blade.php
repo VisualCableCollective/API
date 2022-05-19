@@ -7,8 +7,8 @@
         <h2 class="text-md sm:text-2xl">Powerful technology for the whole world.</h2>
     </div>
 </div>
-<div class="bg-dark-1 text-white xl:px-44 lg:px-24 pb-24" id="products">
-    <h1 class="mx-auto text-center text-2xl sm:text-5xl py-3 font-bold">Discover Our Products</h1>
+<div class="bg-dark-1 text-white xl:px-44 lg:px-24 pb-24 pt-12" id="products">
+    <h1 class="mx-auto text-center text-2xl sm:text-5xl pb-3 font-bold">Discover Our Products</h1>
     <hr class="border-gray-800 pb-5 sm:pb-8">
     <div class="product">
         <div class="sm:flex min-h-25vh">
