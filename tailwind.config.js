@@ -14,6 +14,7 @@ module.exports = {
             },
             backgroundImage: theme => ({
                 'home-1': "url('/img/bg/home-1.jpg')",
+                'home-2': "url('/img/bg/home-2.jpg')",
                 'products-vtcm-home': "url('/img/bg/products-vtcm-home.png')",
                 //errors
                 '404': "url('/img/bg/404.jpg')",

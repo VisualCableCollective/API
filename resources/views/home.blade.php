@@ -1,10 +1,12 @@
 @extends('layouts.app')
 @section('content')
 @parent
-<div class="top-banner bg-home-1 bg-cover text-white flex items-center justify-items-center" style="height: 100vh;">
-    <div class="mx-auto text-center">
-        <h1 class="text-3xl sm:text-6xl font-bold">The VisualCable Collective</h1>
-        <h2 class="text-md sm:text-2xl">Powerful technology for the whole world.</h2>
+<div class="top-banner bg-home-2 bg-cover bg-no-repeat text-white" style="min-height: 100vh;">
+    <div class="flex items-center justify-items-center w-full min-h-screen bg-black/30">
+        <div class="mx-auto text-center">
+            <h1 class="text-3xl sm:text-6xl font-bold">The VisualCable Collective</h1>
+            <h2 class="text-md sm:text-2xl">Powerful & pioneering technology for the whole world.</h2>
+        </div>
     </div>
 </div>
 <div class="bg-dark-1 text-white xl:px-44 lg:px-24 pb-24 pt-12" id="products">
