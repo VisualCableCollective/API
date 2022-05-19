@@ -73,7 +73,7 @@
   </div>
 </div>
 @endauth
-<nav class="navbar-main fixed w-full">
+<nav class="navbar-main fixed w-full z-10">
     <div class="flex justify-between mx-auto max-w-screen-md py-2 items-center">
         <a href="{{url('/')}}">
             <img src="/img/branding/vcc/logo-transparent.png" alt="VTCM logo" class="h-8">
