@@ -29,20 +29,20 @@
         To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
     -->
     <div class="inline-block align-bottom bg-dark-5 rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95 ease-out duration-300" role="dialog" aria-modal="true" aria-labelledby="modal-headline" id="my-account-modal">
-      <div class="p-8">
+      <div class="pb-8 pt-4">
         <div class="sm:flex sm:items-start">
           <div class="text-center">
-            <div class="text-white flex items-center align-items-between border-b-2 border-dark-3 border-opacity-100">
-              <h3 class="text-4xl font-bold" id="modal-headline">
+            <div class="px-4 text-white flex items-center align-items-between pb-2 border-b-2 border-dark-3 border-opacity-100">
+              <h3 class="text-3xl font-bold pr-6" id="modal-headline">
                 My Account
               </h3>
               <button type="button" class="ml-8 onclick-close-modal text-gray-300 hover:text-white transition-colors ease-out duration-200" data-modal="#my-account-modal">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 px-4">
               {{--<a class="text-gray-300 text-lg hover:text-white transition-colors ease-out duration-200 flex" href="">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-5 mr-1">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
