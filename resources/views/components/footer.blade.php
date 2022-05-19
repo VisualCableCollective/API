@@ -54,8 +54,8 @@
             </div>--}}
         </div>
         <hr class="border-dark-1 my-8">
-        <p class="text-center text-gray-300">Copyright ©2020 | Made With ❤️ and ☕ by The VisualCable Collective</p>
-        <div class="flex items-center justify-center pt-5">
+        <p class="text-center text-gray-300 px-6">Copyright ©2020 | Made With ❤️ and ☕ by The VisualCable Collective</p>
+        <div class="flex items-center justify-center pt-5 pb-5">
             <a href="{{route('redirect.instagram')}}" class="text-gray-300 hover:text-white px-2"><i class="fab fa-instagram fa-2x"></i></a>
             <a href="{{route('redirect.twitter')}}" class="text-gray-300 hover:text-white px-2"><i class="fab fa-twitter fa-2x"></i></a>
             {{--<a href="" class="text-gray-300 hover:text-white px-2"><i class="fab fa-youtube fa-2x"></i></a>--}}
