@@ -1,7 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    purge: [
+    content: [
+        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
@@ -14,11 +15,12 @@ module.exports = {
             },
             backgroundImage: theme => ({
                 'home-1': "url('/img/bg/home-1.jpg')",
+                'home-2': "url('/img/bg/home-2.jpg')",
                 'products-vtcm-home': "url('/img/bg/products-vtcm-home.png')",
                 //errors
                 '404': "url('/img/bg/404.jpg')",
             }),
-            minHeight: { 
+            minHeight: {
                 '25vh': '25vh',
             },
             backgroundColor: theme => ({
@@ -39,9 +41,5 @@ module.exports = {
         },
     },
 
-    variants: {
-        opacity: ['responsive', 'hover', 'focus', 'disabled'],
-    },
-
-    plugins: [require('@tailwindcss/ui')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
