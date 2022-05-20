@@ -52,19 +52,21 @@
             </div>
         @endif
 
-        <!-- First Name -->
-        <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="first-name" value="{{ __('First Name') }}" />
-            <x-jet-input id="first-name" type="text" class="mt-1 block w-full" wire:model.defer="state.first_name" autocomplete="first-name" />
-            <x-jet-input-error for="first-name" class="mt-2" />
-        </div>
+        @if (false)
+            <!-- First Name -->
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="first-name" value="{{ __('First Name') }}" />
+                <x-jet-input id="first-name" type="text" class="mt-1 block w-full" wire:model.defer="state.first_name" autocomplete="first-name" />
+                <x-jet-input-error for="first-name" class="mt-2" />
+            </div>
 
-        <!-- Last Name -->
-        <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="last_name" value="{{ __('Last Name') }}" />
-            <x-jet-input id="last_name" type="text" class="mt-1 block w-full" wire:model.defer="state.last_name" autocomplete="last-name" />
-            <x-jet-input-error for="last_name" class="mt-2" />
-        </div>
+            <!-- Last Name -->
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="last_name" value="{{ __('Last Name') }}" />
+                <x-jet-input id="last_name" type="text" class="mt-1 block w-full" wire:model.defer="state.last_name" autocomplete="last-name" />
+                <x-jet-input-error for="last_name" class="mt-2" />
+            </div>
+        @endif
 
         <!-- Email -->
         <div class="col-span-6 sm:col-span-4">
