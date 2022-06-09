@@ -31,3 +31,13 @@ Route::prefix('redirect')->name('redirect.')->group(function(){
     Route::redirect("instagram", "https://www.instagram.com/_vcc_online_/")->name('instagram');
     Route::redirect("twitter", "https://twitter.com/vcc_online")->name('twitter');
 });
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

@@ -21,3 +21,7 @@ mix.js('resources/js/app.js', 'public/js')
     .webpackConfig(require('./webpack.config'))
     .browserSync("127.0.0.1:8000")
     .disableNotifications(); //because it is annoying
+
+if (mix.inProduction()) {
+    mix.version();
+}

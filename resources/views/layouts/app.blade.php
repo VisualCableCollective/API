@@ -22,7 +22,4 @@
     </main>
 @include("components.footer")
 </div>
-@stack('modals')
-
-@livewireScripts
 @endsection
