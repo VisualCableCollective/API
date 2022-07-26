@@ -24,6 +24,7 @@ Route::prefix('legal')->name('legal.')->group(function(){
     Route::view('legal-disclosure', 'legal.legal_disclosure')->name('legal-disclosure');
     Route::view('terms-of-service', 'legal.terms_of_service')->name('terms-of-service');
     Route::view('privacy-policy', 'legal.privacy_policy')->name('privacy-policy');
+    Route::view('privacy-policy/arcade-driver', 'legal.privacy_policy_ad')->name('privacy-policy-ad');
 });
 
 Route::prefix('redirect')->name('redirect.')->group(function(){
