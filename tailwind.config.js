@@ -17,6 +17,7 @@ module.exports = {
                 'home-1': "url('/img/bg/home-1.jpg')",
                 'home-2': "url('/img/bg/home-2.jpg')",
                 'products-vtcm-home': "url('/img/bg/products-vtcm-home.png')",
+                'sponsoring': "url('/img/bg/sponsoring.jpg')",
                 //errors
                 '404': "url('/img/bg/404.jpg')",
             }),

@@ -27,7 +27,6 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Passport::routes();
         Passport::hashClientSecrets();
         Passport::tokensCan([
             'get-vcc-id' => 'Get your VCC account ID and username',

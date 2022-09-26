@@ -33,6 +33,8 @@ Route::prefix('redirect')->name('redirect.')->group(function(){
     Route::redirect("twitter", "https://twitter.com/vcc_online")->name('twitter');
 });
 
+//Route::view('sponsorship', 'sponsorship')->name('sponsorship');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
