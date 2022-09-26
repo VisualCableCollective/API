@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/user/settings', [UserProfileController::class, 'show'])->name('user.settings');
+Route::get('/user/settings', [UserProfileController::class, 'show'])->middleware('auth')->name('user.settings');
 
 Route::prefix('legal')->name('legal.')->group(function(){
     Route::view('legal-disclosure', 'legal.legal_disclosure')->name('legal-disclosure');
