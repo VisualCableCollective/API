@@ -37,16 +37,6 @@ Route::prefix('redirect')->name('redirect.')->group(function(){
 
 //Route::view('sponsorship', 'sponsorship')->name('sponsorship');
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
-
 // Email verification
 Route::get('/email/verify', function () {
     return view('auth.verify-email');
