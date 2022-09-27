@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 @parent
-<div class="pt-10 bg-gray-100">
+<div class="pt-10 bg-dark-1">
     <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
         @if (Laravel\Fortify\Features::canUpdateProfileInformation())
             @livewire('profile.update-profile-information-form')
