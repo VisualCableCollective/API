@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/user/settings', [UserProfileController::class, 'show'])->name('user.settings');
+Route::get('/user/settings', [UserProfileController::class, 'show'])->middleware('auth')->name('user.settings');
 
 Route::prefix('legal')->name('legal.')->group(function(){
     Route::view('legal-disclosure', 'legal.legal_disclosure')->name('legal-disclosure');
@@ -36,16 +36,6 @@ Route::prefix('redirect')->name('redirect.')->group(function(){
 });
 
 //Route::view('sponsorship', 'sponsorship')->name('sponsorship');
-
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
 
 // Email verification
 Route::get('/email/verify', function () {
