@@ -7,14 +7,13 @@
 
         <title>{{ config('app.name', 'The VisualCable Collective') }}</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link rel="stylesheet" href="{{ mix('css/app2.css') }}">
 
         @livewireStyles
+
+        @googlefonts
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
