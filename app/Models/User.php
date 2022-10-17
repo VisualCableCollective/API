@@ -60,4 +60,13 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+
+    public function canAccessInternalPanel() {
+        return $this->roles()->where("can_access_internal_panel", "=", true)->exists();
+    }
 }
