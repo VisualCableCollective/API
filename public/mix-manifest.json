@@ -1,5 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/app2.css": "/css/app2.css"
+    "/css/app2.css": "/css/app2.css",
+    "/img/bg/404.jpg": "/img/bg/404.jpg",
+    "/img/bg/ets2_20200708_214357_00.png": "/img/bg/ets2_20200708_214357_00.png",
+    "/img/bg/home-1.jpg": "/img/bg/home-1.jpg",
+    "/img/bg/home-2.jpg": "/img/bg/home-2.jpg",
+    "/img/bg/products-vtcm-home.png": "/img/bg/products-vtcm-home.png",
+    "/img/bg/sponsoring.jpg": "/img/bg/sponsoring.jpg",
+    "/img/branding/vcc/logo-transparent.png": "/img/branding/vcc/logo-transparent.png"
 }

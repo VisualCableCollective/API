@@ -7,7 +7,7 @@
             </div>
             <h1 class="text-xl pb-3"><strong>{{ $client->name }}</strong> is requesting permission to access your VCC account.</h1>
             @if (count($scopes) > 0)
-                            <div >
+                            <div>
                                     <p><strong>This application will be able to:</strong></p>
 
                                     <ul>
@@ -20,7 +20,7 @@
             <div class="flex w-full justify-between mt-5">
                 <form method="post" action="{{ route('passport.authorizations.approve') }}" class="flex-1 mr-2">
                     @csrf
-    
+
                     <input type="hidden" name="state" value="{{ $request->state }}">
                     <input type="hidden" name="client_id" value="{{ $client->id }}">
                     <input type="hidden" name="auth_token" value="{{ $authToken }}">
@@ -43,7 +43,7 @@
                 <form method="post" action="{{ route('passport.authorizations.deny') }}" class="flex-1 ml-2">
                     @csrf
                     @method('DELETE')
-    
+
                     <input type="hidden" name="state" value="{{ $request->state }}">
                     <input type="hidden" name="client_id" value="{{ $client->id }}">
                     <input type="hidden" name="auth_token" value="{{ $authToken }}">
@@ -65,5 +65,5 @@
                 </form>
             </div>
         </div>
-    </div>    
+    </div>
 @endsection
