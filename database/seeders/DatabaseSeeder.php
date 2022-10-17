@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,6 +14,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        if (Role::where('name', '=', 'CEO')->first() == null) {
+            $ceo_role = new Role();
+            $ceo_role->name = 'CEO';
+            $ceo_role->can_access_internal_panel = true;
+            $ceo_role->can_access_user_management = true;
+            $ceo_role->can_modify_user = true;
+            $ceo_role->can_access_role_management = true;
+            $ceo_role->can_modify_role = true;
+            $ceo_role->can_assign_role = true;
+            $ceo_role->save();
+        }
     }
 }

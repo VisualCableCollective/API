@@ -35,6 +35,13 @@ Route::prefix('redirect')->name('redirect.')->group(function(){
     Route::redirect("twitter", "https://twitter.com/vcc_online")->name('twitter');
 });
 
+Route::prefix('internal')->name('internal.')->middleware('internal')->group(function() {
+    Route::view('/', 'internal.dashboard')->name('dashboard');
+    Route::controller(\App\Http\Controllers\Internal\UserController::class)->prefix('user')->name('user.')->group(function() {
+        Route::get('/', 'index')->name('index');
+    });
+});
+
 //Route::view('sponsorship', 'sponsorship')->name('sponsorship');
 
 // Email verification
