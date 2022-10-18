@@ -11,7 +11,7 @@ class UserController extends Controller
         $response = [];
         $response["success"] = true;
 
-        $response["data"] = User::findOr($id, function() use ($response) {
+        $response["data"] = User::findOr($id, function() use (&$response) {
             $response["success"] = false;
         });
 
