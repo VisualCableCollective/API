@@ -28,3 +28,9 @@ Route::prefix('user')->middleware('auth:api')->group(function(){
     });
     Route::get('{id}', [UserController::class, "show"]);
 });
+
+Route::prefix('s2sc')->middleware('s2sc')->group(function() {
+   Route::prefix('user')->controller(\App\Http\Controllers\API\S2SC\UserController::class)->group(function() {
+       Route::get('{id}', 'show');
+   });
+});

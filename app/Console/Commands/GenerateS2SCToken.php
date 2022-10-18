@@ -29,10 +29,12 @@ class GenerateS2SCToken extends Command
      */
     public function handle()
     {
-        $str = Str::uuid();
+        $token = Str::uuid();
 
-        Cache::put('s2sc_token', $str);
-        
+        Cache::put('s2sc_token', $token);
+
+        $this->info("Successfully generated a new S2SC Token: " . $token);
+
         return Command::SUCCESS;
     }
 }

@@ -8,6 +8,13 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function show($id) {
-        return User::findorfail($id);
+        $response = [];
+        $response["success"] = true;
+
+        $response["data"] = User::findOr($id, function() use ($response) {
+            $response["success"] = false;
+        });
+
+        return $response;
     }
 }
