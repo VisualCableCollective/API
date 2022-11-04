@@ -69,4 +69,9 @@ class User extends Authenticatable implements MustVerifyEmail
     public function canAccessInternalPanel() {
         return $this->roles()->where("can_access_internal_panel", "=", true)->exists();
     }
+
+    public function handoff_tokens()
+    {
+        return $this->hasMany(HandoffToken::class);
+    }
 }
