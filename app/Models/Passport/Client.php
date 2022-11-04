@@ -4,6 +4,9 @@ namespace App\Models\Passport;
 
 use Laravel\Passport\Client as BaseClient;
 
+/**
+ * @mixin IdeHelperClient
+ */
 class Client extends BaseClient
 {
     /**

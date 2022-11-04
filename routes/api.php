@@ -33,4 +33,7 @@ Route::prefix('s2sc')->middleware('s2sc')->group(function() {
    Route::prefix('user')->controller(\App\Http\Controllers\API\S2SC\UserController::class)->group(function() {
        Route::get('{id}', 'show');
    });
+    Route::prefix('handoff-token')->controller(\App\Http\Controllers\API\S2SC\HandoffTokenController::class)->group(function() {
+        Route::post('check', 'check');
+    });
 });

@@ -3,12 +3,13 @@
 namespace App\Enums;
 
 use ArchTech\Enums\Names;
+use ArchTech\Enums\Values;
 
-enum Tool
+enum Tool : string
 {
-    use Names;
+    use Names, Values;
 
-    case Horizon;
-    case Telescope;
-    case Internal;
+    case Horizon = 'horizon';
+    case Telescope = 'telescope';
+    case Internal = 'internal';
 }

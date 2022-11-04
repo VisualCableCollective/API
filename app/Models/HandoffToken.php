@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\Service;
 use App\Enums\Tool;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -19,10 +20,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property Carbon $created_at Represents the time, when the token was created. If it's older than 10 seconds, it's invalid.
  * @property boolean $is_used If the token is used, it's invalid.
  * @property string $user_mac_address Token can only be valid for this mac address
+ * @mixin IdeHelperHandoffToken
  */
 class HandoffToken extends Model
 {
-    use HasFactory;
+    use HasFactory, HasUuids;
 
     /**
      * The attributes that should be cast.

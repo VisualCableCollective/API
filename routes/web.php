@@ -40,6 +40,10 @@ Route::prefix('internal')->name('internal.')->middleware('internal')->group(func
     Route::controller(\App\Http\Controllers\Internal\UserController::class)->prefix('user')->name('user.')->group(function() {
         Route::get('/', 'index')->name('index');
     });
+    Route::controller(\App\Http\Controllers\Internal\HandoffTokenController::class)->prefix('handoff-token')->name('handoff_token.')->group(function() {
+        Route::get('/', 'index')->name('index');
+        Route::get('/{service}/{tool}/create', 'create')->name('create');
+    });
 });
 
 //Route::view('sponsorship', 'sponsorship')->name('sponsorship');

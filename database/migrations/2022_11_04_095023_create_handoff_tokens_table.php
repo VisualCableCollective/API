@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('handoff_tokens', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignIdFor(\App\Models\User::class);
-            $table->enum('service', \App\Enums\Service::names());
-            $table->enum('tool', \App\Enums\Tool::names());
+            $table->enum('service', \App\Enums\Service::values());
+            $table->enum('tool', \App\Enums\Tool::values());
             $table->timestamps();
-            $table->boolean("is_used");
-            $table->macAddress("user_mac_address");
+            $table->boolean('is_used')->default(false);
+            $table->ipAddress('user_ip');
         });
     }
 

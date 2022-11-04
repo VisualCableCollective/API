@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property bool $can_access_role_management
  * @property bool $can_modify_role
  * @property bool $can_assign_role
+ * @mixin IdeHelperRole
  */
 class Role extends Model
 {

@@ -3,10 +3,11 @@
 namespace App\Enums;
 
 use ArchTech\Enums\Names;
+use ArchTech\Enums\Values;
 
-enum Service
+enum Service : string
 {
-    use Names;
+    use Names, Values;
 
-    case VTCManager;
+    case VTCManager = 'vtcmanager';
 }
