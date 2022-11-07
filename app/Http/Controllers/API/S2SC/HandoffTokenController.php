@@ -18,6 +18,11 @@ class HandoffTokenController extends Controller
             ->where('user_ip', '=', $req["user_ip"])->first();
 
         if ($handoff_token != null) {
+
+            // mark token as used
+            $handoff_token->is_used = true;
+            $handoff_token->save();
+
             return response()->noContent();
         }
 
