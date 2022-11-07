@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Service $service Represents the service product.
  * @property Tool $tool Represents the tool used by the service product.
  * @property Carbon $updated_at
- * @property Carbon $created_at Represents the time, when the token was created. If it's older than 10 seconds, it's invalid.
+ * @property Carbon $created_at Represents the time, when the token was created. If it's older than 5 seconds, it's invalid.
  * @property boolean $is_used If the token is used, it's invalid.
  * @property string $user_mac_address Token can only be valid for this mac address
  * @mixin IdeHelperHandoffToken

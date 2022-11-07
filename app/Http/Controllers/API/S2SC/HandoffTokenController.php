@@ -13,7 +13,7 @@ class HandoffTokenController extends Controller
         $req = $request->validated();
 
         $handoff_token = HandoffToken::where('id', '=', $req["token"])->where('is_used', '=', false)
-            ->where('created_at', '>', Carbon::now()->subSeconds(10)->toDateTimeString())
+            ->where('created_at', '>', Carbon::now()->subSeconds(5)->toDateTimeString())
             ->where('service', '=', $req["service"])->where('tool', '=', $req["tool"])
             ->where('user_ip', '=', $req["user_ip"])->first();
 
