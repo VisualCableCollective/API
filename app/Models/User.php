@@ -10,6 +10,9 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use \Laravel\Passport\HasApiTokens;
 
+/**
+ * @mixin IdeHelperUser
+ */
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens;
@@ -68,5 +71,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function canAccessInternalPanel() {
         return $this->roles()->where("can_access_internal_panel", "=", true)->exists();
+    }
+
+    public function handoff_tokens()
+    {
+        return $this->hasMany(HandoffToken::class);
     }
 }
