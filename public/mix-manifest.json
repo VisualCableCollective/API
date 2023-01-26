@@ -1,12 +1,17 @@
 {
-    "/js/app.js": "/js/app.js?id=d664802f593fd1f36f00de20404bd821",
-    "/css/app.css": "/css/app.css?id=32a6c7d760a6e0442774693bb437d00d",
-    "/css/app2.css": "/css/app2.css?id=db588aecfb3773b4917ae3ed7281eb9f",
-    "/img/bg/404.jpg": "/img/bg/404.jpg?id=d43c09d7f219caf7c100d0b642e52447",
-    "/img/bg/ets2_20200708_214357_00.png": "/img/bg/ets2_20200708_214357_00.png?id=27c8125bf4c05cc500bf39fce6878cd0",
-    "/img/bg/home-1.jpg": "/img/bg/home-1.jpg?id=618b3088621b6ccaa597bf2f80b54a0f",
-    "/img/bg/home-2.jpg": "/img/bg/home-2.jpg?id=6dce804a926ce4f6e7e7699f5940ce8e",
-    "/img/bg/products-vtcm-home.png": "/img/bg/products-vtcm-home.png?id=27c8125bf4c05cc500bf39fce6878cd0",
-    "/img/bg/sponsoring.jpg": "/img/bg/sponsoring.jpg?id=6858601fbb301071846cdc23239ce8d2",
-    "/img/branding/vcc/logo-transparent.png": "/img/branding/vcc/logo-transparent.png?id=aabcf0b4d9ae0ef93326382570757e7a"
+    "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
+    "/css/app2.css": "/css/app2.css",
+    "/img/bg/404.jpg": "/img/bg/404.jpg",
+    "/img/bg/electrify-ngd.jpg": "/img/bg/electrify-ngd.jpg",
+    "/img/bg/ets2_20200708_214357_00.png": "/img/bg/ets2_20200708_214357_00.png",
+    "/img/bg/home-1.jpg": "/img/bg/home-1.jpg",
+    "/img/bg/home-2.jpg": "/img/bg/home-2.jpg",
+    "/img/bg/products-vtcm-home.png": "/img/bg/products-vtcm-home.png",
+    "/img/bg/sponsoring.jpg": "/img/bg/sponsoring.jpg",
+    "/img/branding/vcc/logo-transparent.png": "/img/branding/vcc/logo-transparent.png",
+    "/img/icons/Check-Icon.png": "/img/icons/Check-Icon.png",
+    "/img/icons/Error-Icon.png": "/img/icons/Error-Icon.png",
+    "/img/icons/Maintenance-Icon.png": "/img/icons/Maintenance-Icon.png",
+    "/img/icons/Warning-Icon.png": "/img/icons/Warning-Icon.png"
 }

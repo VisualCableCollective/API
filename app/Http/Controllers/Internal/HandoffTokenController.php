@@ -14,6 +14,7 @@ class HandoffTokenController extends Controller
         $service_tools = [];
 
         $service_tools[] = (object)['service_name' => 'VTCManager', 'tool_name' => 'Horizon', 'service_id' => 'vtcmanager', 'tool_id' => 'horizon'];
+        $service_tools[] = (object)['service_name' => 'VTCManager', 'tool_name' => 'Telescope', 'service_id' => 'vtcmanager', 'tool_id' => 'telescope'];
 
         return view('internal.handoff_token.index', ['service_tools' => $service_tools]);
     }

@@ -1,11 +1,15 @@
 @extends('layouts.app')
 @section('content')
 @parent
-<div class="top-banner bg-home-2 bg-cover bg-no-repeat text-white" style="min-height: 100vh;">
-    <div class="flex items-center justify-items-center w-full min-h-screen bg-black/30">
-        <div class="mx-auto text-center">
-            <h1 class="text-3xl sm:text-6xl font-bold">The VisualCable Collective</h1>
-            <h2 class="text-md sm:text-2xl">Powerful & pioneering technology for the whole world.</h2>
+<div class="top-banner bg-cover bg-no-repeat text-white" style="min-height: 100vh;background-image: url('/img/bg/electrify-ngd.jpg');background-position-x: 48.9%; background-position-y: 50%;">
+    <div class="flex items-center justify-items-center w-full min-h-screen bg-black/50">
+        <div class="lg:mx-auto mx-6 text-center">
+            <h1 class="text-4xl sm:text-6xl font-bold pb-2">It's going to be ⚡️</h1>
+            <h2 class="text-md sm:text-2xl max-w-5xl text-gray-300">Let's electrify the world! Electric cars aren't just a vision anymore. They are reality! And it's time for us to deliver some awesome products for improving the all-electric experience furthermore.</h2>
+            <div class="mt-4">
+                <a href="https://nextgendrive.net/" class="text-gray-300 hover:text-white px-2"><i class="fas fa-globe fa-2x"></i></a>
+                <a href="https://www.instagram.com/ngdrive/" class="text-gray-300 hover:text-white px-2"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
         </div>
     </div>
 </div>
